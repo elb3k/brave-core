@@ -211,6 +211,7 @@ void BraveBrowserMainParts::PostProfileInit(Profile* profile,
   }
 #endif
 
+#if BUILDFLAG(ENABLE_SIMPLE_EXTENSION) && BUILDFLAG(ENABLE_EXTENSIONS)
   extensions::ExtensionService* s =
       extensions::ExtensionSystem::Get(profile)->extension_service();
   if (s) {
@@ -218,5 +219,6 @@ void BraveBrowserMainParts::PostProfileInit(Profile* profile,
     static_cast<extensions::BraveComponentLoader*>(loader)
         ->AddSimpleExtensionExtensionOnStartup();
   }
+#endif
 
 }
