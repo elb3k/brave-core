@@ -69,7 +69,7 @@
 #include "brave/components/greaselion/browser/greaselion_service.h"
 #endif
 
-#if BUILDFLAG(ETHEREUM_REMOTE_CLIENT_ENABLED) && BUILDFLAG(ENABLE_EXTENSIONS)
+#if BUILDFLAG(ENABLE_EXTENSIONS)
 #include "brave/browser/extensions/brave_component_loader.h"
 #include "chrome/browser/extensions/extension_service.h"
 #include "extensions/browser/extension_system.h"
